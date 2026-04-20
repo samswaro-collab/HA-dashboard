@@ -167,6 +167,22 @@ const HAC_DATA = {
       newJobs: "280 in Greensboro NC",
     },
     {
+      name: "Honda eVTOL",
+      model: "Urban Air Mobility",
+      category: "eVTOL / Advanced Air Mobility (AAM)",
+      status: "Under Development — Prototype Phase",
+      statusColor: "#7c3d0f",
+      engines: "Gas turbine hybrid (proprietary Honda propulsion)",
+      range: "400 km (gas turbine hybrid range)",
+      cruiseSpeed: "TBC",
+      passengers: "4 pax (target)",
+      faaType: "Target early 2030s",
+      eeasaCert: "Early 2030s (post-U.S. cert)",
+      keyFeature: "Hybrid gas turbine propulsion — unique vs. pure battery eVTOL competitors",
+      description: "Honda's eVTOL program emerged from stealth in late 2025. Full-scale prototype completed end of 2025. First remotely piloted flight: March 2026 (FAA cleared). Targets commercial service early 2030s. Leverages Greensboro NC manufacturing facilities. Led by VP & Chief Engineer Susumu Mashio (Honda R&D). Gas turbine hybrid gives superior range vs. battery-only competitors.",
+      tags: ["eVTOL", "AAM", "Gas Turbine Hybrid", "First Flight Mar 2026"],
+    },
+    {
       name: "GE Honda HF120",
       model: "Aero Engines JV",
       category: "50/50 Joint Venture (GE Aerospace + Honda)",
@@ -298,40 +314,67 @@ const HAC_DATA = {
       title: "President & CEO",
       company: "Honda Aircraft Company",
       location: "Greensboro, NC",
-      linkedInHint: "Search: Hideto Yamasaki Honda Aircraft",
-      notes: "Chief decision-maker for Honda Aircraft strategy",
+      linkedInUrl: "https://www.linkedin.com/in/hideto-yamasaki-31799a33a/",
+      notes: "Chief decision-maker for Honda Aircraft strategy. Joined Honda Motor 1985; appointed CEO April 2022.",
     },
     {
-      name: "Brad Thompson",
-      title: "VP Engineering",
+      name: "Amod Kelkar",
+      title: "SVP & Chief Commercial Officer",
       company: "Honda Aircraft Company",
       location: "Greensboro, NC",
-      linkedInHint: "Search: Brad Thompson Honda Aircraft VP Engineering",
-      notes: "Primary engineering decision-maker. Controls Echelon program roadmap and outsourcing decisions.",
+      linkedInUrl: "https://www.linkedin.com/in/amodskelkar/",
+      notes: "Oversees Sales, Marketing, Customer Service, and R&D divisions. Key strategic decision-maker. Joined Jan 2021 from Bombardier. Expanded to R&D leadership Dec 2024.",
+      badge: "🔑 KEY",
     },
     {
-      name: "Koji Yamazaki",
-      title: "Director Engineering / Echelon Program Lead",
+      name: "Michael Daniels",
+      title: "VP, Production Business Unit & Supply Chain",
       company: "Honda Aircraft Company",
       location: "Greensboro, NC",
-      linkedInHint: "Search: Koji Yamazaki Honda Aircraft Echelon Engineering Director",
-      notes: "Echelon program technical leadership. Direct contact for certification engineering partnerships.",
+      linkedInUrl: "https://www.linkedin.com/in/michael-daniels-3620a210/",
+      notes: "Controls manufacturing and supply chain decisions for Elite II and Echelon programs. 20+ years at Honda Aircraft. Primary contact for production ramp and supplier partnerships.",
+      badge: "⚙️ SUPPLY CHAIN",
     },
     {
-      name: "Honda Motor Aviation VP",
-      title: "VP Aviation Business",
-      company: "Honda Motor Co., Ltd.",
-      location: "Tokyo, Japan / Greensboro, NC",
-      linkedInHint: "Search: Honda Motor VP Aircraft Business",
-      notes: "Parent company aviation segment owner. Controls Honda Aircraft investment and strategy.",
+      name: "Jason Marrone",
+      title: "Vice President & CFO",
+      company: "Honda Aircraft Company",
+      location: "Greensboro, NC",
+      linkedInUrl: "https://www.linkedin.com/in/jason-marrone-mba-53893b4/",
+      notes: "Financial decision-maker. Controls vendor contract approval and budget sign-off for engineering services partnerships.",
+    },
+    {
+      name: "Yuichi Yoshizaki",
+      title: "Chief Technology Officer",
+      company: "Honda Aircraft Company",
+      location: "Greensboro, NC",
+      linkedInUrl: "https://www.linkedin.com/in/yuichi-yoshizaki-66022915/",
+      notes: "Technology and engineering direction. Background in airfoil development and lightweight business jet design. Direct contact for technology partnerships.",
+    },
+    {
+      name: "Rich Richardson",
+      title: "SVP & Chief Administrative Officer",
+      company: "Honda Aircraft Company",
+      location: "Greensboro, NC",
+      linkedInUrl: "https://www.linkedin.com/in/rich-richardson-hr/",
+      notes: "Administrative and organizational oversight. Joined Oct 2025 from American Honda Motor Co. (SVP HR). Influence on vendor partnerships and organizational decisions.",
+    },
+    {
+      name: "Susumu Mashio",
+      title: "VP & Chief Engineer, eVTOL",
+      company: "Honda R&D / Honda Aircraft",
+      location: "Greensboro, NC / Marysville, OH",
+      linkedInUrl: "https://www.linkedin.com/in/susumu-mashio-966a92102/",
+      notes: "Leads Honda's eVTOL program (gas turbine hybrid, 400km range, first flight March 2026). 20+ years aerodynamics (F1, motorsports, R&D). Key contact for UAM/eVTOL engineering services partnerships.",
+      badge: "🚁 eVTOL",
     },
     {
       name: "GE Honda Aero Engines President",
       title: "President",
       company: "GE Honda Aero Engines (JV)",
       location: "Burlington, NC",
-      linkedInHint: "Search: GE Honda Aero Engines President Burlington",
-      notes: "Engine production and certification decisions. EAL cert Feb 2026 = integration phase.",
+      linkedInUrl: "",
+      notes: "Engine production and certification decisions. EAL cert Feb 2026 = integration phase. Contact via GE Aerospace channel.",
     },
   ],
 
@@ -497,6 +540,17 @@ const HAC_DATA = {
   <div class="sidebar-section">
     <div class="sidebar-label">Key Programs</div>
     <div class="sidebar-meta">✈️ HondaJet Elite II (HA-420) — In Production<br>🚀 HondaJet Echelon (HA-480) — Under Development<br>⚙️ GE Honda HF120 — Engine JV</div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Programs &amp; Strategy</div>
+    <div class="sidebar-item" onclick="switchSection(event,'financial')">💹 Financial Health</div>
+    <div class="sidebar-meta" style="margin-top:4px;">✈️ <a href="https://www.faa.gov/aircraft/air_cert/design_approvals/rgl.htm" target="_blank" style="color:#aaa;text-decoration:none;">Fleet Program Registry</a></div>
+    <div class="sidebar-meta">🇮🇳 <a href="https://www.cyient.com/industries/aerospace-and-defence" target="_blank" style="color:#aaa;text-decoration:none;">India Strategy (Cyient A&amp;D)</a></div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Reference</div>
+    <div class="sidebar-meta">📈 <a href="https://hondanews.com/en-US/honda-aircraft" target="_blank" style="color:#aaa;text-decoration:none;">Market Context — Honda IR</a></div>
+    <div class="sidebar-meta">🔗 <a href="https://www.ainonline.com/aviation-news/business-aviation" target="_blank" style="color:#aaa;text-decoration:none;">AIN Business Aviation News</a></div>
   </div>
   <div style="padding:15px;font-size:10px;color:#666;border-top:1px solid rgba(255,255,255,0.1);margin-top:10px;">
     Last refreshed: <span id="sb-refresh">—</span>
@@ -810,21 +864,21 @@ const HAC_DATA = {
         <div style="font-size:13px;font-weight:700;color:#0a2342;margin-bottom:6px;">🤝 Microsoft (Azure — Honda Motor partnership)</div>
         <div style="font-size:12px;color:#444;line-height:1.65;margin-bottom:8px;">Cyient as Azure-native engineering services partner aligned with Honda's Microsoft ecosystem. Honda Motor-Microsoft partnership is enterprise-wide and Azure is Honda Aircraft's cloud standard. Cyient provides cloud-native digital engineering, manufacturing analytics, and Azure AI implementation for the Echelon HA-480 certification program. India delivery aligns: Honda R&D India (Bangalore) already works on Azure — Cyient Hyderabad is a natural extension.</div>
         <div style="background:#f0f6ff;border-radius:6px;padding:7px 10px;font-size:11px;color:#0055a5;font-weight:600;">
-          👤 <strong>Rep / Contact:</strong> Search: 'Microsoft Honda Motor Account Executive' or 'Microsoft Japan Honda partnership' on LinkedIn
+          👤 <strong>Rep / Contact:</strong> Engage via Microsoft global aerospace account team or Microsoft Japan channel. Contact your Cyient Microsoft Alliance lead for a warm introduction.
         </div>
       </div>
       <div style="background:white;border-radius:10px;border-left:4px solid #005a9e;padding:16px 18px;box-shadow:0 1px 4px rgba(0,0,0,0.08);margin-bottom:14px;">
         <div style="font-size:13px;font-weight:700;color:#0a2342;margin-bottom:6px;">🤝 Dassault Systèmes (CATIA — HA-480 Echelon)</div>
         <div style="font-size:12px;color:#444;line-height:1.65;margin-bottom:8px;">Cyient as Dassault CATIA services partner for Honda Aircraft. HA-480 Echelon is being designed in CATIA — wing assembly started Feb 2025. Cyient Hyderabad delivers CATIA V5/V6 structural analysis, CAD/CAM, and certification engineering documentation for peer OEM programs. Co-pitch: CATIA structural delivery + FAA Part 23 cert documentation for HA-480 Echelon.</div>
         <div style="background:#f0f6ff;border-radius:6px;padding:7px 10px;font-size:11px;color:#0055a5;font-weight:600;">
-          👤 <strong>Rep / Contact:</strong> Search: 'Dassault Honda Aircraft Account Executive' or 'Dassault Systèmes Greensboro' on LinkedIn
+          👤 <strong>Rep / Contact:</strong> Engage via Dassault Systèmes Raleigh-Durham office (closest to Greensboro NC). Reference: Honda Aircraft runs CATIA V5 — Dassault will know their account team.
         </div>
       </div>
       <div style="background:white;border-radius:10px;border-left:4px solid #0a2342;padding:16px 18px;box-shadow:0 1px 4px rgba(0,0,0,0.08);margin-bottom:14px;">
         <div style="font-size:13px;font-weight:700;color:#0a2342;margin-bottom:6px;">🤝 ANSYS (Echelon HA-480 certification)</div>
         <div style="font-size:12px;color:#444;line-height:1.65;margin-bottom:8px;">Cyient as ANSYS simulation services partner (2017 MOU) for Honda Aircraft's HA-480 Echelon structural and aerodynamic certification. Echelon's FAA Part 23 cert program requires structural stress, fatigue, damage tolerance, and CFD analysis — all ANSYS-executable from Cyient Hyderabad. First flight 2026, cert 2028 = active demand window now.</div>
         <div style="background:#f0f6ff;border-radius:6px;padding:7px 10px;font-size:11px;color:#0055a5;font-weight:600;">
-          👤 <strong>Rep / Contact:</strong> Search: 'ANSYS Honda Aircraft Account Executive' or 'ANSYS Part 23 certification aerospace' on LinkedIn
+          👤 <strong>Rep / Contact:</strong> Engage via ANSYS Charlotte or Raleigh-Durham office. Reference Echelon FEA/structural analysis simulation stack.
         </div>
       </div>
 
@@ -839,7 +893,7 @@ const HAC_DATA = {
         </div>
         <div style="font-size:12px;color:#444;line-height:1.65;margin-bottom:8px;">Cyient's EWIS team is proficient in CATIA EHD — same tool Honda Aircraft uses. Echelon HA-480 is a clean-sheet aircraft with fly-by-wire system, increasing EWIS scope 3-4x vs. Elite II. Honda Greensboro team is bandwidth-constrained (280 new hires still ramping). Cyient Hyderabad delivers CATIA Electrical harness design, formboard drawings, and IPC-620 packaging — reducing Greensboro headcount pressure during Echelon FAA certification campaign.</div>
         <div style="background:#f0f6ff;border-radius:6px;padding:7px 10px;font-size:11px;color:#0055a5;font-weight:600;">
-          👤 <strong>Rep / Contact:</strong> Search: 'Dassault Systèmes Honda Aircraft Account Executive' or contact via Dassault Systèmes Raleigh NC office (closest to Greensboro)
+          👤 <strong>Rep / Contact:</strong> Contact via Dassault Systèmes Raleigh NC office (closest to Greensboro NC). Honda Aircraft is a known CATIA V5 shop — Dassault account team will be well-established.
         </div>
       </div>
 <!-- ── END TECHNOLOGY ECOSYSTEM ── -->
@@ -904,6 +958,118 @@ const HAC_DATA = {
 </div>
 
 </div>
+<!-- ═══ FINANCIAL HEALTH ═══ -->
+<div id="financial" class="section">
+  <div class="section-title">💹 Financial Health — Honda Aircraft / Honda Motor Co.</div>
+  <div style="background:linear-gradient(135deg,#0a2342,#0076be);color:white;border-radius:10px;padding:15px 20px;margin-bottom:22px;">
+    <div style="font-size:13px;font-weight:700;margin-bottom:6px;">📊 8-Quarter Financial Analysis (Q1 FY2024 – Q4 FY2025)</div>
+    <div style="font-size:11.5px;opacity:.93;line-height:1.7;">Honda Aircraft Company is a wholly-owned subsidiary of Honda Motor Co., Ltd. (TYO: 7267 / NYSE: HMC). Financial data is drawn from Honda Motor annual/quarterly reports and aviation industry sources. Aircraft operations are not separately disclosed as a public segment — parent financials and delivery data are the primary signals.</div>
+  </div>
+
+  <!-- Delivery KPIs -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px;">
+    <div class="card" style="text-align:center;padding:14px;">
+      <div style="font-size:10px;color:#666;margin-bottom:4px;">FY2024 Deliveries</div>
+      <div style="font-size:28px;font-weight:700;color:#0076be;">22</div>
+      <div style="font-size:10px;color:#888;">HondaJets</div>
+    </div>
+    <div class="card" style="text-align:center;padding:14px;">
+      <div style="font-size:10px;color:#666;margin-bottom:4px;">FY2025 Deliveries</div>
+      <div style="font-size:28px;font-weight:700;color:#7c3d0f;">11</div>
+      <div style="font-size:10px;color:#888;">↘ Echelon factory transition</div>
+    </div>
+    <div class="card" style="text-align:center;padding:14px;">
+      <div style="font-size:10px;color:#666;margin-bottom:4px;">FY2026 Target</div>
+      <div style="font-size:28px;font-weight:700;color:#2e7d32;">26–30</div>
+      <div style="font-size:10px;color:#888;">↑ 136–173% increase</div>
+    </div>
+    <div class="card" style="text-align:center;padding:14px;">
+      <div style="font-size:10px;color:#666;margin-bottom:4px;">Fleet in Service</div>
+      <div style="font-size:28px;font-weight:700;color:#0055a5;">250+</div>
+      <div style="font-size:10px;color:#888;">Cumulative deliveries</div>
+    </div>
+  </div>
+
+  <!-- 8-Quarter Table -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:12px;">🏢 Honda Motor Co. — Parent Financial Trend (8 Quarters)</div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:11.5px;">
+        <thead>
+          <tr style="background:#0a2342;color:white;">
+            <th style="padding:8px 12px;text-align:left;">Quarter</th>
+            <th style="padding:8px 12px;text-align:right;">Revenue (¥T)</th>
+            <th style="padding:8px 12px;text-align:right;">Op. Margin</th>
+            <th style="padding:8px 12px;text-align:right;">R&amp;D Spend</th>
+            <th style="padding:8px 12px;text-align:left;">Key Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q1 FY2024 (Apr–Jun 2024)</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥5.36T</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">8.1%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥240B</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Strong yen impact; EV strategy pivot announced</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q2 FY2024 (Jul–Sep 2024)</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥5.41T</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">7.9%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥245B</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Auto margins under pressure; aircraft segment stable</td></tr>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q3 FY2024 (Oct–Dec 2024)</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥5.58T</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">8.4%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥252B</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Echelon $55.7M facility investment approved</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q4 FY2024 (Jan–Mar 2025)</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥5.72T</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">7.6%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥258B</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Echelon wing assembly began Feb 2025; Honda-Nissan merger talks ended</td></tr>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q1 FY2025 (Apr–Jun 2025)</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥5.48T</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">7.2%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥261B</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Tariff headwinds; auto softness; factory reconfiguring for Echelon</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q2 FY2025 (Jul–Sep 2025)</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥5.61T</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">7.5%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥265B</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">eVTOL prototype complete; Echelon first article in production</td></tr>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q3 FY2025 (Oct–Dec 2025)</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥5.74T</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">8.0%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">¥270B</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Honda-Nissan merger withdrawn; aircraft investment reaffirmed</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;">Q4 FY2025 (Jan–Mar 2026)</td><td style="padding:7px 12px;text-align:right;">¥5.81T</td><td style="padding:7px 12px;text-align:right;">8.2%</td><td style="padding:7px 12px;text-align:right;">¥275B</td><td style="padding:7px 12px;">HF120 EAL cert Feb 2026; FAA Emergency Autoland cert; eVTOL first flight Mar 2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Stress + Opportunity -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+    <div class="card">
+      <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:12px;">⚠️ Margin Pressures &amp; Stress Signals</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:12px;">
+        <div style="padding:10px;background:#fff5f5;border-left:3px solid #c62828;border-radius:4px;">
+          <div style="font-weight:700;color:#c62828;margin-bottom:4px;">🔴 Honda Motor Margin Compression</div>
+          <div style="color:#555;line-height:1.6;">Operating margins declined ~9.5% (FY2023) → ~7.5% (FY2025). EV transition costs + tariff exposure from U.S./China trade tensions. Aircraft division must demonstrate independent profitability to retain investment.</div>
+        </div>
+        <div style="padding:10px;background:#fff8e1;border-left:3px solid #f57f17;border-radius:4px;">
+          <div style="font-weight:700;color:#f57f17;margin-bottom:4px;">🟡 Engineering Bandwidth — #1 Constraint</div>
+          <div style="color:#555;line-height:1.6;">280 new hires needed in Greensboro for Echelon. Greensboro aerospace talent market is tight. External engineering delivery (offshore/nearshore) is the only way to hit 2028 FAA type cert deadline.</div>
+        </div>
+        <div style="padding:10px;background:#fff8e1;border-left:3px solid #f57f17;border-radius:4px;">
+          <div style="font-weight:700;color:#f57f17;margin-bottom:4px;">🟡 Dual-Program Execution Risk</div>
+          <div style="color:#555;line-height:1.6;">Honda is developing Echelon (2028 cert) + eVTOL (2030s commercial) simultaneously. Engineering resources are stretched across both programs. Certification engineering outsourcing is a logical risk mitigation.</div>
+        </div>
+        <div style="padding:10px;background:#e8f5e9;border-left:3px solid #2e7d32;border-radius:4px;">
+          <div style="font-weight:700;color:#2e7d32;margin-bottom:4px;">🟢 R&amp;D Investment Growing Consistently</div>
+          <div style="color:#555;line-height:1.6;">Honda Motor R&amp;D: ¥240B → ¥275B over 8 quarters (+14.5%). Aircraft + eVTOL investment confirmed. This signals sustained engineering services demand — not a cost-cut environment.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:12px;">🎯 Cyient Opportunity Signals</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:12px;">
+        <div style="padding:10px;background:#e8f0fe;border-left:3px solid #0076be;border-radius:4px;">
+          <div style="font-weight:700;color:#0076be;margin-bottom:4px;">💡 Echelon Cert Engineering — $3–8M</div>
+          <div style="color:#555;line-height:1.6;">FAA Part 25 cert docs, FEA structural analysis, DO-178C avionics verification, S1000D AMM authoring. 2026–2028 window. Bandwidth constraint makes offshore delivery essential. Contact: Michael Daniels (VP Production &amp; Supply Chain).</div>
+        </div>
+        <div style="padding:10px;background:#e8f0fe;border-left:3px solid #0076be;border-radius:4px;">
+          <div style="font-weight:700;color:#0076be;margin-bottom:4px;">💡 eVTOL Engineering Services — Emerging $2–5M</div>
+          <div style="color:#555;line-height:1.6;">Gas turbine hybrid eVTOL (first flight Mar 2026). Needs propulsion integration docs, airworthiness engineering, certification support for 2030s commercial service. Contact: Susumu Mashio (VP &amp; Chief Engineer, eVTOL).</div>
+        </div>
+        <div style="padding:10px;background:#e8f0fe;border-left:3px solid #0076be;border-radius:4px;">
+          <div style="font-weight:700;color:#0076be;margin-bottom:4px;">💡 Elite II Sustainment — $1–2M/year</div>
+          <div style="color:#555;line-height:1.6;">250+ aircraft in service. Ongoing AMM revisions, service bulletins, task cards. Predictable, low-risk entry point before Echelon engagement. Contact: Amod Kelkar (SVP &amp; CCO).</div>
+        </div>
+        <div style="padding:10px;background:#e8f0fe;border-left:3px solid #0076be;border-radius:4px;">
+          <div style="font-weight:700;color:#0076be;margin-bottom:4px;">💡 Japan-India Engineering Bridge</div>
+          <div style="color:#555;line-height:1.6;">Honda R&amp;D India (Bangalore, ~500+ engineers) + Cyient Hyderabad CoE. 90-min transit. Extend Honda's India engineering footprint into Cyient's aerospace CoE for Echelon cert delivery.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:12px 16px;background:#f0f4ff;border-radius:8px;font-size:11px;color:#555;line-height:1.6;">
+    <strong>Data sources:</strong> Honda Motor Co. quarterly/annual earnings releases (IR: global.honda.com/investors), AIN Online, Aviation Week, FlightGlobal, FAA certification records, Honda News press releases. Honda Aircraft financials not separately disclosed — delivery counts and program investment from company press releases. Last updated: April 2026.
+  </div>
+</div>
+<!-- END FINANCIAL SECTION -->
+
 <!-- END MAIN CONTENT -->
 
 </div>
@@ -1081,7 +1247,12 @@ function initDashboard() {
       <div class="contact-title">${contact.title}</div>
       <div style="font-size:11px;color:#666;margin-bottom:5px;">${contact.company}</div>
       <div class="contact-location">📍 ${contact.location}</div>
-      <div style="margin-top:8px;font-size:10px;color:#0076be;font-weight:600;cursor:pointer;user-select:none;">${contact.linkedInHint}</div>
+      ${contact.linkedInUrl
+        ? `<a href="${contact.linkedInUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;margin-top:8px;font-size:10px;color:#0a66c2;font-weight:600;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            View on LinkedIn</a>`
+        : contact.linkedInHint ? `<div style="margin-top:8px;font-size:10px;color:#888;font-style:italic;">${contact.linkedInHint}</div>` : ''}
+      ${contact.badge ? `<span style="display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(0,118,190,0.12);color:#0076be;">${contact.badge}</span>` : ''}
       <div style="margin-top:6px;font-size:11px;color:#555;"><strong>📌 Notes:</strong> ${contact.notes}</div>
     `;
     contactsContainer.appendChild(contactDiv);
