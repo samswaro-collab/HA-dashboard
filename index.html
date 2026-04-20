@@ -1262,7 +1262,117 @@ function showPriTab(btn, panelId) {
 
   })();
   </script>
-  <!-- END CHARTS: Honda Aircraft (Honda Motor) -->
+  
+  <!-- FY ANNUAL + SEGMENT CHARTS: Honda Aircraft (Honda Motor) -->
+  <div style="background:white;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:16px;">
+    <div style="font-size:13px;font-weight:700;color:#e53935;margin-bottom:4px;">📅 Full-Year Revenue Summary (¥T (Honda consolidated))</div>
+    <div style="font-size:11px;color:#666;margin-bottom:14px;">Annual totals: FY2023 → FY2024 → FY2025 &nbsp;|&nbsp; Compare growth trajectory year-over-year</div>
+    <div style="max-width:480px;">
+      <canvas id="fy_hondaaircraft" style="max-height:200px;"></canvas>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:#555;line-height:1.7;">
+      <strong>FY2023 → FY2024:</strong> +6.6% &nbsp;|&nbsp; <strong>FY2024 → FY2025:</strong> +2.6% &nbsp;|&nbsp; <strong>3-year CAGR:</strong> 4.6%
+    </div>
+  </div>
+
+  <div style="background:white;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:16px;">
+    <div style="font-size:13px;font-weight:700;color:#e53935;margin-bottom:4px;">🏢 Segment Revenue Breakdown (¥T)</div>
+    <div style="font-size:11px;color:#666;margin-bottom:14px;">8-quarter stacked view — hover for segment detail</div>
+    <canvas id="seg_hondaaircraft" style="max-height:280px;"></canvas>
+    <div style="margin-top:10px;font-size:10.5px;color:#777;font-style:italic;">Source: Honda Motor consolidated segments. Aircraft is within 'Power Products & Other' — Honda Aircraft standalone revenue not separately disclosed.</div>
+  </div>
+
+  <script>
+  (function(){
+    // FY Annual chart
+    new Chart(document.getElementById('fy_hondaaircraft'), {
+      type: 'bar',
+      data: {
+        labels: ["FY2023","FY2024","FY2025"],
+        datasets: [{
+          label: 'Annual Revenue (¥T (Honda consolidated))',
+          data: [20.7, 22.07, 22.64],
+          backgroundColor: ['#e53935cc','#e53935dd','#e53935'],
+          borderColor: '#e53935',
+          borderWidth: 2,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: function(c){ return ' '+c.raw+' ¥T (Honda consolidated)'; } } }
+        },
+        scales: {
+          y: { beginAtZero: false, grid: { color: 'rgba(0,0,0,0.04)' }, ticks: { font: {size:11} } },
+          x: { grid: { display: false }, ticks: { font: {size:12}, color:'#333' } }
+        }
+      }
+    });
+
+    // Segment stacked bar
+    new Chart(document.getElementById('seg_hondaaircraft'), {
+      type: 'bar',
+      data: {
+        labels: ["Q1 FY24","Q2 FY24","Q3 FY24","Q4 FY24","Q1 FY25","Q2 FY25","Q3 FY25","Q4 FY25"],
+        datasets: [
+              {
+              label: "Motorcycles",
+              data: [1.92, 1.94, 2.01, 2.06, 1.97, 2.02, 2.07, 2.09],
+              backgroundColor: "rgba(229,57,53,0.82)",
+              borderColor: "rgba(229,57,53,1.0)",
+              borderWidth: 1, borderRadius: 3
+            },
+              {
+              label: "Automobiles",
+              data: [2.58, 2.61, 2.7, 2.78, 2.64, 2.7, 2.77, 2.82],
+              backgroundColor: "rgba(30,136,229,0.82)",
+              borderColor: "rgba(30,136,229,1.0)",
+              borderWidth: 1, borderRadius: 3
+            },
+              {
+              label: "Financial Services",
+              data: [0.72, 0.72, 0.73, 0.74, 0.73, 0.75, 0.76, 0.76],
+              backgroundColor: "rgba(56,142,60,0.82)",
+              borderColor: "rgba(56,142,60,1.0)",
+              borderWidth: 1, borderRadius: 3
+            },
+              {
+              label: "Power Products & Aircraft",
+              data: [0.14, 0.14, 0.14, 0.14, 0.14, 0.14, 0.14, 0.14],
+              backgroundColor: "rgba(245,127,23,0.82)",
+              borderColor: "rgba(245,127,23,1.0)",
+              borderWidth: 1, borderRadius: 3
+            }
+            ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+            labels: { font: {size:10}, padding: 12, boxWidth: 12 }
+          },
+          tooltip: { mode: 'index', callbacks: {
+            footer: function(items){
+              var total = items.reduce(function(a,b){ return a+(b.raw||0); },0);
+              return 'Total: '+total.toFixed(2)+' ¥T';
+            }
+          } }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false }, ticks: { font: {size:9}, maxRotation: 45 } },
+          y: { stacked: true, grid: { color: 'rgba(0,0,0,0.04)' }, ticks: { font: {size:10} } }
+        }
+      }
+    });
+
+  })();
+  </script>
+  <!-- END SEGMENT/FY CHARTS -->
+<!-- END CHARTS: Honda Aircraft (Honda Motor) -->
 
   <!-- Stress + Opportunity -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
